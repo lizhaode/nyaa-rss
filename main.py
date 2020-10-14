@@ -8,7 +8,7 @@ from lxml import etree
 class MySQL:
     def __init__(self):
         self._connect = pymysql.Connect(host=os.getenv('host'), user=os.getenv('user'), password=os.getenv('password'),
-                                        database=os.getenv('database'), port=os.getenv('port'), autocommit=True)
+                                        database=os.getenv('database'), port=int(os.getenv('port')), autocommit=True)
         self._cursor = self._connect.cursor()
 
     def save(self, title: str, url: str) -> None:
