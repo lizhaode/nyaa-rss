@@ -30,6 +30,9 @@ if __name__ == '__main__':
         for item in channel.iterchildren('item'):
             title = item.xpath('title')[0].text
             url = item.xpath('guid')[0].text
-            sql.save(title, url)
+            try:
+                sql.save(title, url)
+            except pymysql.err.IntegrityError as e:
+                pass
     sql.close()
     print('end')
