@@ -11,7 +11,7 @@ on:
 env:
   host: ${{secrets.host}}
   user: ${{secrets.user}}
-  password: ${{secrets.pasword}}
+  password: ${{secrets.password}}
   database: ${{secrets.database}}
   port: ${{secrets.port}}
 
