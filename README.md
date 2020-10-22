@@ -1,5 +1,7 @@
 # rss 数据入库
 
+![fetch rss to mysql](https://github.com/lizhaode/nyaa-rss/workflows/fetch%20rss%20to%20mysql/badge.svg)
+
 `https://sukebei.nyaa.si/` 提供的 RSS 拉取
 
 ## 用法
