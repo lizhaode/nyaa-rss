@@ -30,4 +30,4 @@ jobs:
       - name: Sync dependencies
         run: uv sync
       - name: Run script
-        run: uv run nyaa-rss
+        run: uv run python main.py
