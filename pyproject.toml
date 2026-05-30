@@ -1,3 +1,17 @@
+[project]
+name = "nyaa-rss"
+version = "0.1.0"
+description = "Fetch RSS from sukebei.nyaa.si and store to MySQL"
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "lxml",
+    "pymysql",
+]
+
 [tool.black]
 line-length = 120
 skip-string-normalization = true
+
+[dependency-groups]
+dev = []

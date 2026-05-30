@@ -1,7 +1,8 @@
 import requests
 from lxml import etree
 
-if __name__ == '__main__':
+
+def main():
     print('start')
     root = etree.XML(requests.get('https://sukebei.nyaa.si?page=rss').text)
     for channel in root.iterchildren('channel'):
@@ -12,3 +13,7 @@ if __name__ == '__main__':
             print(url)
             print()
     print('end')
+
+
+if __name__ == '__main__':
+    main()
