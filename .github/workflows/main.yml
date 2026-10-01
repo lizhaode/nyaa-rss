@@ -2,11 +2,11 @@ name: fetch rss to mysql
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: "0 */1 * * *"
 
 env:
   host: ${{secrets.host}}
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ 3.9 ]
+        python-version: [3.13]
     steps:
       - uses: actions/checkout@v4
       - name: Install uv
